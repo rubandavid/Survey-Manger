@@ -8,18 +8,20 @@
     <title>Register Survey</title>
 </head>
 <body>
-<h1>Register</h1>
+<h1 style="text-align: center">Register Survey</h1>
+<br>
 <form  id="surveyForm" action="/saveSurvey" method="post">
-    Name <input type="text" id="userName" placeholder="Enter Name" name="userName">
-    <br>
-    Enter Phone : <input  id="mobileNumber" type="number" name="mobileNumber">
-    <br>
-    Enter OTP : <input  id="otpNumber" type="number" name="otpNumber">
-    <br>
-    <button id="verifyOtp" class="btn btn-danger" type="button" onclick="validateOTP()">Sent OTP</button>
-    <button id="saveSurvey" class="btn btn-dark" type="button" onclick="saveingSurvey()">Save Survey</button>
-
-        <a class="btn btn-primary" role="button" href="/">Back</a>
+  <div>
+   <table class="table" >
+       <tr><td> Name </td><td><input type="text" id="userName" class="form-control" placeholder="Enter Name" name="userName"></td></tr>
+       <tr><td> Enter Phone :</td><td><input  id="mobileNumber" class="form-control" type="number" name="mobileNumber"></td></tr>
+       <tr><td> Enter OTP : </td><td><input  id="otpNumber" class="form-control" type="number" name="otpNumber"></td><td><button id="verifyOtp" class="btn btn-danger" type="button" onclick="validateOTP()">Sent OTP</button></td></tr>
+       <tr><td align="center" colspan="2">
+           <button id="saveSurvey" class="btn btn-dark" type="button" onclick="saveingSurvey()">Save Survey</button>
+            <a class="btn btn-primary" role="button" href="/">Back</a>
+       </td></tr>
+   </table>
+  </div>
 </form>
 <script>
     var otp = 0;

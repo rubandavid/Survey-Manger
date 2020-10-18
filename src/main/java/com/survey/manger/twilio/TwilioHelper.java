@@ -13,7 +13,7 @@ public class TwilioHelper {
   public static void sent(String mobileNumber, String msgBody) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-  //  Message message = Message.creator(new PhoneNumber("+91"+mobileNumber), new PhoneNumber("+16502624793"), msgBody).create();
+    Message message = Message.creator(new PhoneNumber("+91"+mobileNumber), new PhoneNumber("+16502624793"), msgBody).create();
 
    // System.out.println(message.getSid());
     System.out.println("OTP Sent successfully. :)");
